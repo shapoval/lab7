@@ -8,6 +8,8 @@ driver = webdriver.Chrome()
 driver.get(link)
 option3 = driver.find_element_by_tag_name('button')
 option3.submit()
+new_window = driver.window_handles[1]
+driver.switch_to.window(new_window)
 x_element = driver.find_element_by_id('input_value')
 x = x_element.text
 y = calc(x)
